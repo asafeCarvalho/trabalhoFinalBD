@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho de BD</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Consultas ao MovieLens</h1>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('consulta1') }}">Filmes por Ator</a></li>
+            <li><a href="{{ url_for('consulta2') }}">Top 10 Filmes combinando 3 gêneros</a></li>
+            <li><a href="{{ url_for('consulta3') }}">Filmes por País de Produção e Idioma Falado</a></li>
+            <li><a href="{{ url_for('consulta4') }}">Dados de um Filme</a></li>
+            <li><a href="{{ url_for('consulta5') }}">Top 10 Coleções de Filmes</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

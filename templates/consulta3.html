@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta 3</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Consulta 3: Filmes por País de Produção e Idioma Falado</h1>
+    <form action="{{ url_for('consulta3') }}" method="get">
+        <label for="prod_country">País de Produção:</label>
+        <input type="text" id="prod_country" name="prod_country" required>
+        <label for="spoken_lang">Idioma Falado:</label>
+        <input type="text" id="spoken_lang" name="spoken_lang" required>
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if results %}
+        <h2>Resultados</h2>
+        <table>
+            <thead>
+                <tr>
+                    {% for column in columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in results %}
+                    <tr>
+                        {% for column in columns %}
+                            <td>{{ result[column] }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+</body>
+</html>
