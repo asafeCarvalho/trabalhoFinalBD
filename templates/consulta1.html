@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Consulta 1: Filmes por Ator</h1>
+    <h1>Encontre os filmes do seu ator favorito</h1>
     <form action="{{ url_for('consulta1') }}" method="get">
-        <label for="actor_name">Nome do Ator:</label>
         <input type="text" id="actor_name" name="actor_name" required>
         <button type="submit">Buscar</button>
     </form>

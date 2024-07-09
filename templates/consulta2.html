@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta 2: Filmes por Gênero</title>
+    <title>Combinação de ilmes por Gênero</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Consulta 2: Top 10 Filmes combinando 3 gêneros</h1>
+    <h1>Top 10 Filmes combinando 3 gêneros</h1>
     <form action="{{ url_for('consulta2') }}" method="get">
         <label for="genre1">Gênero 1:</label>
         <input type="text" id="genre1" name="genre1" required>

@@ -5,17 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabalho de BD</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #000000;
+        }
+
+        h1 { /* titulo */
+            color: #c1bec2;
+            text-align: center; 
+            margin-bottom: 50px;
+            margin-top: 50px;
+            font-size: 80px;
+        }
+
+        .menu {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            display: flex; /* Usa flexbox para colocar os itens lado a lado */
+            justify-content: center; /* Centraliza os itens horizontalmente */
+            flex-wrap: wrap; /* Permite que os itens quebrem para a linha seguinte */
+        }
+
+        .menu li {   /* caixinhas */
+            margin: 10px;
+            background-color: #b9b4b4;
+            padding: 20px;
+            width: 150px; /* largura fixa para todos os quadrados */
+            height: 150px; /* altura fixa para todos os quadrados */
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease-in-out;
+            display: flex; /* Usa flexbox para centralizar conteúdo */
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+        }
+
+        .menu li:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .menu li a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            text-align: center;
+            width: 100%; /* Faz o link ocupar toda a largura do pai (li) */
+        }
+
+        .menu li a:hover {
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>Consultas ao MovieLens</h1>
-    <nav>
-        <ul>
+    <h1>MovieLens</h1>
+    <div class="container">
+        <ul class="menu">
             <li><a href="{{ url_for('consulta1') }}">Filmes por Ator</a></li>
             <li><a href="{{ url_for('consulta2') }}">Top 10 Filmes combinando 3 gêneros</a></li>
             <li><a href="{{ url_for('consulta3') }}">Filmes por País de Produção e Idioma Falado</a></li>
             <li><a href="{{ url_for('consulta4') }}">Dados de um Filme</a></li>
             <li><a href="{{ url_for('consulta5') }}">Top 10 Coleções de Filmes</a></li>
         </ul>
-    </nav>
+    </div>
 </body>
 </html>

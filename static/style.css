@@ -2,17 +2,18 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 20px;
-    background-color: #f0f0f0;
+    background-color: #000000;
+    color: #f8f4f4;
 }
 
 h1 {
-    color: #333;
+    color: #ccc7c7;
     text-align: center;
     margin-bottom: 20px;
 }
 
 form {
-    background-color: #fff;
+    background-color: #5c5959;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -33,7 +34,7 @@ form input[type=text] {
 
 form button {
     padding: 10px 20px;
-    background-color: #333;
+    background-color: #5f5b5b;
     color: #fff;
     border: none;
     border-radius: 3px;
@@ -45,25 +46,25 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #3d3a3a;
+    box-shadow: 0 2px 4px rgba(226, 224, 224, 0.1);
     border: 1px solid #ccc; 
 }
 
 table th {
-    background-color: #333;
-    color: #fff;
+    background-color: #5c5959;
+    color: #fdf9f9;
     padding: 10px;
     border: 1px solid #ccc; 
 }
 
 table td {
     padding: 10px;
-    border: 1px solid #ccc; 
+    border: 1px solid #c4c1c1; 
 }
 
 a {
-    color: #333;
+    color: #020202;
     text-decoration: none;
 }
 
